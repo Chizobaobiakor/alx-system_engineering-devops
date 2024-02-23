@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+# Using the until command to run a looop.
+
+count=0
+
+until [ $count -eq 10 ]
+do
+  echo "Best School"
+  (( count++ ))
+done
