@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+# Invisible to Sigterm
+
+terminate_handler() 
+{
+	echo "I am invincible!!!"
+}
+# Register the terminate_handler function to catch the SIGTERM signal
+trap 'terminate_handler' SIGTERM
+while 'true'
+do
+	echo "To infinity and beyond"
+	sleep 2
+
+done
