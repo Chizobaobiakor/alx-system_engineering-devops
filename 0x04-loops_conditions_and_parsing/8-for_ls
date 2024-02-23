@@ -1,0 +1,7 @@
+#!/usr/bin/env bash 
+# Printing files on the current directory without the file extension
+
+list=$(ls)
+for i in $list; do
+  echo "$i" | cut -d '-' -f2
+done
