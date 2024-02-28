@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+ifconfig | grep "inet\s" | awk '{print $2}'
+for ip in $interfaces; do
+  # Check if the IP is in the format of an IPv4 address
+  if [[ $ip =~ ^[0-9]+\.[0-9]+\.[0-9]+\.[0-9]+$ ]]; then
+    echo "$ip"
+  fi
+done
